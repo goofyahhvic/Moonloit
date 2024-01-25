@@ -1,7 +1,7 @@
 IncludeDir = {}
 IncludeDir["glad"] = "external/glad/include/"
-IncludeDir["spdlog"] = "submods/spdlog/spdlog/include/"
-IncludeDir["glm"] = "submods/glm/glm/"
+IncludeDir["spdlog"] = "submods/spdlog/include/"
+IncludeDir["glm"] = "submods/glm/"
 
 include "external/glad"
 
