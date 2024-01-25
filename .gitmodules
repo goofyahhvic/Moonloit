@@ -1,0 +1,6 @@
+[submodule "submods/glm"]
+	path = submods/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "submods/spdlog"]
+	path = submods/spdlog
+	url = https://github.com/gabime/spdlog.git
