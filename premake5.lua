@@ -3,8 +3,6 @@ IncludeDir["glad"] = "external/glad/include/"
 IncludeDir["spdlog"] = "submods/spdlog/include/"
 IncludeDir["glm"] = "submods/glm/"
 
-include "external/glad"
-
 project "Moonloit"
     kind "StaticLib"
 
@@ -38,7 +36,6 @@ project "Moonloit"
 		os.getenv("VULKAN_SDK") .. "/Lib/"
 	}
     links {
-        "glad",
 		"vulkan-1"
     }
 
