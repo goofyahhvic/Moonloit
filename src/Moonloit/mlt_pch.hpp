@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <functional>
 
+// std data structures
 #include <string>
 #include <sstream>
 #include <array>
@@ -13,3 +14,7 @@
 #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
+
+// rendering stuff
+#include <glm/glm.hpp>
+#include <vulkan/vulkan.hpp>

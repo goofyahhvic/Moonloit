@@ -12,9 +12,6 @@ project "Moonloit"
 
     language "C++"
     cppdialect "C++17"
-      
-    targetdir("bin/" ..  output_dir .. "/%{prj.name}/")
-    objdir("bin-int/" ..  output_dir .. "/%{prj.name}/")
 
     pchheader "mlt_pch.hpp"
     pchsource "src/Moonloit/mlt_pch.cpp"
@@ -34,10 +31,15 @@ project "Moonloit"
         "include/Moonloit/",
         "%{IncludeDir.spdlog}",
         "%{IncludeDir.glad}",
-        "%{IncludeDir.glm}"
+        "%{IncludeDir.glm}",
+        os.getenv("VULKAN_SDK") .. "/Include/"
     }
+	libdirs {
+		os.getenv("VULKAN_SDK") .. "/Lib/"
+	}
     links {
-        "glad"
+        "glad",
+		"vulkan-1"
     }
 
     defines {
