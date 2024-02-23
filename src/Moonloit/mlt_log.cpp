@@ -4,19 +4,19 @@
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/ansicolor_sink.h>
 
-namespace moonloit {
-	Logger Log::renderer_logger;
-	Logger Log::vxl_logger;
-	Logger Log::app_logger;
+namespace mlt {
+	Logger Log::sm_RendererLogger;
+	Logger Log::sm_VxlLogger;
+	Logger Log::sm_AppLogger;
 
-	void Log::init() {
-		renderer_logger = spdlog::stdout_color_mt("MOONLOIT_RENDERER");
-		vxl_logger = spdlog::stdout_color_mt("MOONLIGHT_VXL");
-		app_logger = spdlog::stdout_color_mt("CLIENT");
+	void Log::Init() {
+		sm_RendererLogger = spdlog::stdout_color_mt("MOONLOIT_RENDERER");
+		sm_VxlLogger = spdlog::stdout_color_mt("MOONLIGHT_VXL");
+		sm_AppLogger = spdlog::stdout_color_mt("CLIENT");
 
-		renderer_logger->set_level(spdlog::level::trace);
-		vxl_logger->set_level(spdlog::level::trace);
-		app_logger->set_level(spdlog::level::trace);
+		sm_RendererLogger->set_level(spdlog::level::trace);
+		sm_VxlLogger->set_level(spdlog::level::trace);
+		sm_AppLogger->set_level(spdlog::level::trace);
 
 		spdlog::set_pattern("%^[%T] [%n]%$: %v");
 	}
