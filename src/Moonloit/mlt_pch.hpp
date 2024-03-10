@@ -18,3 +18,5 @@
 // rendering stuff
 #include <glm/glm.hpp>
 #include <vulkan/vulkan.hpp>
+
+#include "mlt_log.hpp"
