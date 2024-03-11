@@ -17,7 +17,7 @@
 #endif
 
 #ifdef MLT_ASSERTIONS_ENABLED
-	#define MOONLOIT_ASSERT(x, ...) { if (!(x)) { throw mlt::Exception(__VA_ARGS__); } }
+	#define MOONLOIT_ASSERT(x, ...) { if (!(x)) { throw std::runtime_error(__VA_ARGS__); } }
 #else
 	#define MOONLOIT_ASSERT(x, ...)
 #endif

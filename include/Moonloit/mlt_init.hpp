@@ -26,17 +26,26 @@ namespace mlt {
 		char* what() {
 			return m_What.data();
 		}
-		const std::string& what(bool string) {
+		const char* what() const {
+			return m_What.data();
+		}
+		const std::string& what(bool string) const {
 			return m_What;
 		}
-		const char* type() {
+		char* type() {
+			return m_MsgType.data();
+		}
+		const std::string& type() const {
 			return m_MsgType;
 		}
-		const char* msg() {
+		char* msg() {
+			return m_Msg.data();
+		}
+		const std::string& msg() const {
 			return m_Msg;
 		}
 	private:
-		const char *m_Msg, *m_MsgType;
+		std::string m_Msg, m_MsgType;
 		std::string m_What;
 	};
 
